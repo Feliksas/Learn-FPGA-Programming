@@ -14,7 +14,7 @@ module seven_segment
    output logic [7:0]                 cathode
    );
 
-  localparam INTERVAL = int'(100000000 / (CLK_PER * REFR_RATE));
+  localparam INTERVAL = int'(1000000000 / (CLK_PER * REFR_RATE));
 
   logic [$clog2(INTERVAL)-1:0]        refresh_count;
   logic [$clog2(NUM_SEGMENTS)-1:0]    anode_count;
